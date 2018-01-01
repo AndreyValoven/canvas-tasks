@@ -18,13 +18,22 @@ if (canvas.getContext) {
 
     ctx.beginPath();
     ctx.fillStyle = "blue"
-    ctx.arc(220, 130, 80, 0, 2*Math.PI);
+    ctx.arc(220, 130, 80, 0, 2*Math. PI);
     ctx.stroke();
     ctx.fill();
 
     ctx.beginPath();
     ctx.moveTo(180, 170);
-    ctx.bezierCurveTo(180 , 350, 450, 400, 450, 170);
+
+//    for(var x = 0; x < 10; x++) {
+//        ctx.moveTo(180, 170);
+        ctx.bezierCurveTo(180 /*+ x */, 350, 450, 400, 450, 170);
+        ctx.lineTo(180, 170)
+//    }
+    ctx.closePath();
+    ctx.strokeStyle = "red";
+    ctx.lineWidth = 10;
     ctx.stroke();
+    ctx.fill();
 
 }
