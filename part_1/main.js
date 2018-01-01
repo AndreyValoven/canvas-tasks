@@ -1,7 +1,7 @@
 var canvas = document.querySelector('#first');
 if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
-    ctx.strokeRect(250,200,100,100);
+/*    ctx.strokeRect(250,200,100,100);
     ctx.fillStyle = "#fff";
     ctx.fillRect(50, 50, 100, 150);
     ctx.fillRect(450, 50, 100, 150);
@@ -27,13 +27,44 @@ if (canvas.getContext) {
 
 //    for(var x = 0; x < 10; x++) {
 //        ctx.moveTo(180, 170);
-        ctx.bezierCurveTo(180 /*+ x */, 350, 450, 400, 450, 170);
+        ctx.bezierCurveTo(180 + x , 350, 450, 400, 450, 170);
         ctx.lineTo(180, 170)
 //    }
     ctx.closePath();
     ctx.strokeStyle = "red";
     ctx.lineWidth = 10;
     ctx.stroke();
+    ctx.fill();*/
+
+    ctx.beginPath();
     ctx.fill();
+    ctx.fillStyle = "yellow";
+    ctx.beginPath();
+    ctx.arc(320, 160, 150, 0, 2 * Math.PI);
+    ctx.fill();
+    ctx.beginPath();
+    ctx.moveTo(180, 170);
+    //for(var x=0;x<10;x++){
+    //}
+    ctx.bezierCurveTo(180, 220, 330, 400, 450, 170);
+    ctx.lineTo(180, 170);
+    ctx.closePath();
+    ctx.fillStyle = "black";
+    ctx.fill();
+    ctx.lineWidth = 5;
+    ctx.strokeStyle = "rgb(125,0,125)";
+    ctx.stroke();
+    ctx.fillStyle = "#FFFFFF";
+    ctx.fillRect(250, 172, 50, 50);
+    ctx.fillRect(310, 172, 50, 50);
+
+    //eye
+    ctx.beginPath();
+    ctx.fillStyle = "wite"
+    ctx.arc(250, 100, 20, 0, 2 * Math.PI);
+    ctx.arc(380, 100, 20, 0, 2 * Math.PI);
+//    ctx.stroke();
+    ctx.fill();
+    ctx.closePath();
 
 }
