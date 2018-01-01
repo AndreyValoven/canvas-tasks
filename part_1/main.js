@@ -1,16 +1,9 @@
 var canvas = document.querySelector('#first');
-if(canvas.getContext) {
+if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
-    ctx.fillStyle = "blue"
-    ctx.rect(100,   50, 200, 200);
-
-    ctx.shadowBlur = 30;
-    ctx.shadowColor = '#000';
-
-    ctx.shadowOffsetX = 30;
-    ctx.shadowOffsetY = 30;
-
-
-    ctx.fill();
-
+    ctx.strokeRect(250,200,100,100);
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(50, 50, 100, 150);
+    ctx.fillRect(450, 50, 100, 150);
+    ctx.clearRect(60, 60, 80, 130);
 }
