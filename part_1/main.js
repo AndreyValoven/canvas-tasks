@@ -6,4 +6,13 @@ if (canvas.getContext) {
     ctx.fillRect(50, 50, 100, 150);
     ctx.fillRect(450, 50, 100, 150);
     ctx.clearRect(60, 60, 80, 130);
+    //set path
+    ctx.beginPath();
+    // drawing commands
+    ctx.moveTo(100, 300);
+    ctx.lineTo(200, 100);
+    ctx.lineTo(250, 210);
+//    ctx.stroke();
+    ctx.fill();
+
 }
