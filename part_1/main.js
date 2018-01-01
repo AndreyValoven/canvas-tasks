@@ -22,4 +22,9 @@ if (canvas.getContext) {
     ctx.stroke();
     ctx.fill();
 
+    ctx.beginPath();
+    ctx.moveTo(180, 170);
+    ctx.bezierCurveTo(180 , 350, 450, 400, 450, 170);
+    ctx.stroke();
+
 }
