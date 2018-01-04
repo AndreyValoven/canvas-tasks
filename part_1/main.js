@@ -32,10 +32,17 @@ if (canvas.getContext) {
     ctx.rect(50, 300, 200, 100);
     ctx.stroke();
 
-    var lngrade = ctx.createLinearGradient(60, 0, 450, 500);
+    var lngrade = ctx.createLinearGradient(500, 0, 300, 0);
     lngrade.addColorStop(0, 'blue');
     lngrade.addColorStop(1, 'red');
 
     ctx.fillStyle = lngrade;
-    ctx.fillRect(300, 200, 300, 200);
+    ctx.fillRect(300, 200, 300, 100);
+
+    var rdgrade = ctx.createRadialGradient(400, 400, 20, 420, 420, 50);
+    rdgrade.addColorStop(0, 'blue');
+    rdgrade.addColorStop(1, 'red');
+
+    ctx.fillStyle = rdgrade;
+    ctx.fillRect(350, 350, 150, 400);
 }
