@@ -17,7 +17,11 @@ if (canvas.getContext) {
     }
 
     for(let x = 0; x < 10; x++) {
-        ctx.fillStyle = `rgba( ${Math.ceil(x * 20)}, 0, 0, ${(x + 1)/10})`;
-        ctx.fillRect(25 + (x * 30),115, 30, 30);
+        ctx.lineWidth = 1 + x;
+        ctx.beginPath();
+        ctx.strokeStyle = `rgb(${Math.ceil(x * 20)},  0, 0)`;
+        ctx.moveTo(50 + (x * 20), 150);
+        ctx.lineTo(50 + (x * 20), 270);
+        ctx.stroke();
     }
 }
