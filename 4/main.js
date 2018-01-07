@@ -1,3 +1,4 @@
+window.onload = function() {
 let canvas = document.getElementById('second');
 if(canvas.getContext) {
     let ctx = canvas.getContext('2d');
@@ -6,8 +7,8 @@ if(canvas.getContext) {
     let myText = 'welcome welcome welcome welcome welcome welcome welcome welcome';
     ctx.fillText(myText, 50, 50, 500);*/
 
-
-    let img = new Image();
+    // add image
+/*    let img = new Image();
     img.onload = function() {
         console.log('now we can do something');
         ctx.drawImage(img, 0, 0);
@@ -15,8 +16,13 @@ if(canvas.getContext) {
         ctx.fillText('This is my image', 50, 50, 500);
     };
 
-    img.src = 'https://angular.io/assets/images/logos/angular/logo-nav@2x.png';
+    img.src = 'https://angular.io/assets/images/logos/angular/logo-nav@2x.png';*/
+
+    // add image from page
+    let newImage = document.getElementById('image');
+    ctx.drawImage(newImage, 0, 0);
 
 
 
+}
 }
